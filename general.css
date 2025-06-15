@@ -9,53 +9,60 @@ html, body{
 
 .calcBody{
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: hsl(0, 2%, 12%);
-    max-width: 500px;
-    height: 65%;
     border-radius: 27px;
-    padding: 20px;
-    box-shadow: 5px 10px 9px hsl(0, 23%, 9%), -5px -3px 5px hsla(0, 0%, 74%, 0.336);
+    box-shadow: 5px 10px 9px hsl(0, 23%, 9%), -4px -2px 1px hsla(0, 0%, 74%, 0.336);
+    width: 400px;
+    height: 600px;
 
 }
 
 #displaySection{
 
-    display: flex;
-    width: 92%;
-    height: 20%;
-    box-shadow: inset 7px 7px 5px hsl(0, 23%, 9%), inset -2px -2px 3px hsla(0, 0%, 74%, 0.336);
+    flex: 1;
+    box-shadow: inset 7px 7px 5px hsl(0, 23%, 9%), 
+    inset -2px -2px 3px hsla(0, 0%, 74%, 0.336);
     border-radius: 27px;
-    padding: 20px;
-    justify-self: center;
-    align-self: center;
+    margin: 10px;
+    max-height: 150px;
 
 }
 
 .buttonSection{
 
-    height: 100%;
-    width: 100%;
-    position: absolute;
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
-    gap: 10px;
-    align-items: center;
-    justify-self: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
 
 }
 
 .buttonSection button{
 
+    width: 100%;
     border-radius: 15px;
     aspect-ratio: 1/1;
     border: none;
     background: hsl(0, 2%, 12%);
     color: rgb(85, 84, 84);
     font-size: 1.5rem;
+    box-shadow: 5px 10px 9px hsl(0, 23%, 9%), -4px -2px 1px hsla(0, 0%, 74%, 0.336);
 
+}
+
+.buttonCol-1, .buttonCol-2, .buttonCol-3, .buttonCol-4{
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    max-width: 70px;
+    
 
 }
